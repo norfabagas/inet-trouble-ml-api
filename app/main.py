@@ -80,6 +80,14 @@ def classify_view():
         text_categories[1]: arr[0][1],
         text_categories[2]: arr[0][2],
         text_categories[3]: arr[0][3],
-      }
+      },
+      "text": {
+        "default": text,
+        "factory_punctuated": punctuated_text,
+        "stopwords_lowerized": lowerized_text,
+        "tokenized": tokenized_text,
+        "tokenized_padded": padded_text.tolist()
+      },
+      "tokenizer": tokenizer.to_json()
     }
   )

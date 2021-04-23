@@ -14,8 +14,10 @@ ENV FLASK_APP=wsgi.py
 
 COPY . /inet-trouble-ml-api
 
-RUN pip install pip==21.0.1
+RUN pip install pip==20.0.2
 RUN pip install setuptools==54.1.2
+# RUN pip install keras==2.4.3
+# RUN pip install flask=1.1.2
 RUN pip install --no-cache-dir -r requirements.txt
 
 EXPOSE 5000
